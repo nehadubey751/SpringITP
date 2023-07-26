@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean name="address1" class="com.springTest.SpringITP.Address">
+	    <property name="pin" value="444709"></property>
+		<property name="city" value="Amravati"></property>
+</bean>
+<bean name="address2" class="com.springTest.SpringITP.Address">
+	    <property name="pin" value="88021"></property>
+		<property name="city" value="Pune"></property>
+</bean>
+    <!-- bean definitions here -->
+    <bean name="student1" class="com.springTest.SpringITP.Student">
+		<property name="rollNo" value="11"></property>
+		<property name="studentName" value="Nisha"></property>
+		<property name="studentAddress" ref="address1"></property>
+	</bean>
+      
+    <bean name="student2" class="com.springTest.SpringITP.Student">			
+		<property name="rollNo" value="14"></property>
+		<property name="studentName" value="pallu"></property>
+		<property name="studentAddress" ref="address2"></property>
+	</bean>
+	
+	
+</beans>

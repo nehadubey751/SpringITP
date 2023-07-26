@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+<!--<context:annotation-config />-->
+ 
+<bean name="marks1" class="com.springTest.xmlAutowiring.Marks">
+	<property name="math_marks" value="20"></property>
+	<property name="eng_marks" value="120"></property>
+	<!--<constructor-arg name="math_marks" value="20"></constructor-arg>
+	<constructor-arg name="eng_marks" value="50"></constructor-arg>-->
+
+
+</bean>
+           <!-- 3 ways in xml using Auto Wrining -->
+    <bean name="Student" class="com.springTest.xmlAutowiring.Student" autowire="byName">
+	<!--<bean name="Student" class="com.springTest.xmlAutowiring.Student" autowire="byType">-->
+    <!-- <bean name="Student" class="com.springTest.xmlAutowiring.Student" autowire="constructor">-->
+
+	<property name="id" value="12"></property>
+	<property name="name" value="Neha"></property>
+	<!-- <property name="marks" ref="marks"></property>-->
+	
+	<!--<constructor-arg name="id" value="19"></constructor-arg>
+	<constructor-arg name="name" value="pallu"></constructor-arg>-->
+</bean>
+
+
+</beans>
